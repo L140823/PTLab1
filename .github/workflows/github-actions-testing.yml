@@ -28,4 +28,5 @@ jobs:
           pycodestyle src test 
       - name: Test with pytest 
         run: | 
-          PYTHONPATH=./:./src/ pytest test 
+          export PYTHONPATH=./:./src/
+          python -m pytest test/ -v
