@@ -33,9 +33,9 @@ class TestJsonDataReader:
             ]
         }
 
-        return json.dumps(new_data, 
-                           ensure_ascii=False, 
-                           indent=2), expected_data
+        return json.dumps(new_data,
+                          ensure_ascii=False,
+                          indent=2), expected_data
 
     @pytest.fixture()
     def filepath_and_data(self,
@@ -51,7 +51,7 @@ class TestJsonDataReader:
         os.unlink(temp_path)
 
     def test_read_normal_data(self,
-                           filepath_and_data: tuple[str, DataType]) -> None:
+                              filepath_and_data: tuple[str, DataType]) -> None:
         file_content = JsonDataReader().read(filepath_and_data[0])
         assert file_content == filepath_and_data[1]
 
@@ -146,8 +146,8 @@ class TestJsonDataReader:
             os.unlink(temp_path)
 
     def test_read_structure_validation(self,
-              filepath_and_data: tuple[str, DataType]
-              ) -> None:
+                                       filepath_and_data: tuple[str, DataType]
+                                       ) -> None:
         file_content = JsonDataReader().read(filepath_and_data[0])
 
         # Проверяем структуру данных
@@ -159,4 +159,3 @@ class TestJsonDataReader:
                 assert len(subject) == 2
                 assert isinstance(subject[0], str)  # название предмета
                 assert isinstance(subject[1], int)  # оценка
-                

@@ -17,4 +17,3 @@ class JsonDataReader(DataReader):
                 students[student_name].append((subject_name, score))
 
         return students
-        
