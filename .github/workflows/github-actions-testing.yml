@@ -3,7 +3,8 @@ name: Testing the Python code
 on: 
   push: 
     branches: 
-      - main 
+      - main
+      - json-feature
  
 jobs: 
   build: 
@@ -28,5 +29,5 @@ jobs:
           pycodestyle src test 
       - name: Test with pytest 
         run: | 
-          export PYTHONPATH=./:./src/
-          python -m pytest test/ -v
+          PYTHONPATH=./:./src/ pytest test 
+          
