@@ -4,6 +4,7 @@ import sys
 
 from CalcRating import CalcRating
 from TextDataReader import TextDataReader
+from StudentFinder import StudentFinder
 
 
 def get_path_from_arguments(args) -> str:
@@ -23,6 +24,10 @@ def main():
 
     rating = CalcRating(students).calc()
     print("Rating: ", rating)
+
+    finder = StudentFinder()
+    best_student = finder.find_student_with_high_scores(students)
+    print("Студент с 90+ баллами по 2+ дисциплинам:", best_student)
 
 
 if __name__ == "__main__":
