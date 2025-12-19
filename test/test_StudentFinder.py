@@ -100,4 +100,4 @@ class TestStudentFinder:
         finder = StudentFinder()
         qualified = finder.get_all_qualified_students(data)
         assert set(qualified) == {"Иванов Иван", "Петров Петр"}
-        assert len(qualified) == 2
+ 

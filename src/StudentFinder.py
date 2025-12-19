@@ -28,4 +28,9 @@ class StudentFinder:
         return count
 
     def get_all_qualified_students(self, data: DataType) -> list[str]:
-        return self._find_qualified_students(data)
+        qualified_students = self._find_qualified_students(data)
+
+        if not qualified_students:
+            return "Студентов с 90+ баллами по двум дисциплинам не найдено"
+
+        return qualified_students
