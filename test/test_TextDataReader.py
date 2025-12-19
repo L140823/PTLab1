@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 import pytest
 from pathlib import Path
-from Types import DataType
-from TextDataReader import TextDataReader
+from src.Types import DataType
+from src.TextDataReader import TextDataReader
 
 
 class TestTextDataReader:

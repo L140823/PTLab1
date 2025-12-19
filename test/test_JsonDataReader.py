@@ -3,8 +3,8 @@ import pytest
 import json
 import tempfile
 import os
-from Types import DataType
-from JsonDataReader import JsonDataReader
+from src.Types import DataType
+from src.JsonDataReader import JsonDataReader
 
 
 class TestJsonDataReader:
